@@ -5,10 +5,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 DEEPGRAM_API_KEY = os.getenv('DEEPGRAM_API_KEY')
+SAVE_PATH = os.getenv('SAVE_PATH')
 
 AUDIO = input("Enter audo file location: ")
 FILE = input("Enter text file name: ")
-PATH = input("Enter file save location: ")
 
 async def main():
     print ("Working")
@@ -22,7 +22,7 @@ async def main():
 
         transcript = response['results']['channels'][0]['alternatives'][0]['paragraphs']['transcript']
 
-        completeName = os.path.join(PATH, FILE+".txt")
+        completeName = os.path.join(SAVE_PATH, FILE+".txt")
 
         with open(completeName, 'w') as f:
             f.write(transcript)
