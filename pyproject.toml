@@ -1,0 +1,19 @@
+
+[project]
+name = "synapse_transcripts"
+version = "0.2.0"
+description = "Taking our audio files and converting them into transcripts using Deepgram."
+authors = [
+    {name = "Joshua Wallert", email = "drjoshua@officialsynapse.com"},
+]
+dependencies = [
+    "deepgram-sdk>=2.5.0",
+    "python-dotenv>=1.0.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
